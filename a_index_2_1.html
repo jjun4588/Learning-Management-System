@@ -1,0 +1,33 @@
+<?
+session_start();
+
+if(!isset($_SESSION['user_id'])){
+  header("location: login.html");
+}
+?>
+		
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>7팀 학사관리시스템</title>
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body> 
+	<header>
+    	<?php include "a_header.php";?>
+    </header>
+
+	<section>
+	    <?php 
+		if($_POST['sub']) include "a_main_2_1_1.php";
+		else if($_POST['cancel']) include "a_main_2_1_2.php";
+		else if($_POST['l']) include "a_main_2_1.php";
+		else include "a_main_2.php";
+	    ?>
+	</section> 
+
+</body>
+</html>

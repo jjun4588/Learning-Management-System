@@ -1,0 +1,102 @@
+//유저(학생)
+INSERT INTO user (id, pw, department, job) values ('1001', '900101', '컴퓨터공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1002', '900102', '컴퓨터공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1003', '900103', '컴퓨터공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1004', '900104', '컴퓨터공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1005', '900105', '전기공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1006', '900106', '전기공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1007', '900107', '전기공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1008', '900108', '전기공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1009', '900109', '정보통신공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1010', '900110', '정보통신공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1011', '900111', '정보통신공학과', 학생);
+INSERT INTO user (id, pw, department, job) values ('1012', '900112', '정보통신공학과', 학생);
+
+//유저(조교)
+INSERT INTO user (id, pw, department, job) values ('2001', '800101', '컴퓨터공학과', 조교);
+INSERT INTO user (id, pw, department, job) values ('2002', '800102', '전기공학과', 조교);
+INSERT INTO user (id, pw, department, job) values ('2003', '800103', '정보통신공학과', 조교);
+
+//유저(교수)
+INSERT INTO user (id, pw, department, job) values ('3001', '700101', '컴퓨터공학과', 교수);
+INSERT INTO user (id, pw, department, job) values ('3002', '700102', '컴퓨터공학과', 교수);
+INSERT INTO user (id, pw, department, job) values ('3003', '700103', '전기공학과', 교수);
+INSERT INTO user (id, pw, department, job) values ('3004', '700104', '전기공학과', 교수);
+INSERT INTO user (id, pw, department, job) values ('3005', '700105', '정보통신공학과', 교수);
+INSERT INTO user (id, pw, department, job) values ('3006', '700106', '정보통신공학과', 교수);
+
+//유저(행정)
+INSERT INTO user (id, pw, job) values ('4001', '600101', 행정);
+
+//강의 테이블
+INSERT INTO lecture (Scode, Sname, id, Pnumber, time, lroom) values ('1', '웹DB', '3001', 4, '월요일', '101호');
+INSERT INTO lecture (Scode, Sname, id, Pnumber, time, lroom) values ('2', '컴퓨터프로그래밍', '3002', 4, '화요일', '102호');
+INSERT INTO lecture (Scode, Sname, id, Pnumber, time, lroom) values ('3', '전자회로', '3003', 4, '수요일', '103호');
+INSERT INTO lecture (Scode, Sname, id, Pnumber, time, lroom) values ('4', '전기회로실험', '3004', 4, '목요일', '104호');
+INSERT INTO lecture (Scode, Sname, id, Pnumber, time, lroom) values ('5', '데이터통신', '3005', 4, '금요일', '105호');
+INSERT INTO lecture (Scode, Sname, id, Pnumber, time, lroom) values ('6', '정보기술개론', '3006', 4, '목요일', '106호');
+
+//성적 테이블
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3001', '1', '1001', 3, '웹DB');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3001', '1', '1002', 3, '웹DB');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3001', '1', '1003', 3, '웹DB');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3001', '1', '1004', 3, '웹DB');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3002', '2', '1001', 3, '컴퓨터프로그래밍');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3002', '2', '1002', 3, '컴퓨터프로그래밍');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3002', '2', '1003', 3, '컴퓨터프로그래밍');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3002', '2', '1004', 3, '컴퓨터프로그래밍');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3003', '3', '1005', 3, '전자회로');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3003', '3', '1006', 3, '전자회로');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3003', '3', '1007', 3, '전자회로');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3003', '3', '1008', 3, '전자회로');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3004', '4', '1005', 3, '전기회로실험');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3004', '4', '1006', 3, '전기회로실험');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3004', '4', '1007', 3, '전기회로실험');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3004', '4', '1008', 3, '전기회로실험');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3005', '5', '1009', 3, '데이터통신');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3005', '5', '1010', 3, '데이터통신');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3005', '5', '1011', 3, '데이터통신');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3005', '5', '1012', 3, '데이터통신');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3006', '6', '1009', 3, '정보기술개론');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3006', '6', '1010', 3, '정보기술개론');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3006', '6', '1011', 3, '정보기술개론');
+INSERT INTO grades (Pid, Scode, id, Sgrades, Sname) values ('3006', '6', '1012', 3, '정보기술개론');
+
+//수강 강의 테이블
+INSERT INTO class (Pid, Scode, id) values ('3001', '1', 1001);
+INSERT INTO class (Pid, Scode, id) values ('3001', '1', 1002);
+INSERT INTO class (Pid, Scode, id) values ('3001', '1', 1003);
+INSERT INTO class (Pid, Scode, id) values ('3001', '1', 1004);
+INSERT INTO class (Pid, Scode, id) values ('3002', '2', 1001);
+INSERT INTO class (Pid, Scode, id) values ('3002', '2', 1002);
+INSERT INTO class (Pid, Scode, id) values ('3002', '2', 1003);
+INSERT INTO class (Pid, Scode, id) values ('3002', '2', 1004);
+INSERT INTO class (Pid, Scode, id) values ('3003', '3', 1005);
+INSERT INTO class (Pid, Scode, id) values ('3003', '3', 1006);
+INSERT INTO class (Pid, Scode, id) values ('3003', '3', 1007);
+INSERT INTO class (Pid, Scode, id) values ('3003', '3', 1008);
+INSERT INTO class (Pid, Scode, id) values ('3004', '4', 1005);
+INSERT INTO class (Pid, Scode, id) values ('3004', '4', 1006);
+INSERT INTO class (Pid, Scode, id) values ('3004', '4', 1007);
+INSERT INTO class (Pid, Scode, id) values ('3004', '4', 1008);
+INSERT INTO class (Pid, Scode, id) values ('3005', '5', 1009);
+INSERT INTO class (Pid, Scode, id) values ('3005', '5', 1010);
+INSERT INTO class (Pid, Scode, id) values ('3005', '5', 1011);
+INSERT INTO class (Pid, Scode, id) values ('3005', '5', 1012);
+INSERT INTO class (Pid, Scode, id) values ('3006', '6', 1009);
+INSERT INTO class (Pid, Scode, id) values ('3006', '6', 1010);
+INSERT INTO class (Pid, Scode, id) values ('3006', '6', 1011);
+INSERT INTO class (Pid, Scode, id) values ('3006', '6', 1012);
+
+
+//휴보강 테이블
+INSERT INTO lecture_state(Pid, Scode, time) values('3001', '1', '월요일');
+INSERT INTO lecture_state(Pid, Scode, time) values('3002', '2', '화요일');
+INSERT INTO lecture_state(Pid, Scode, time) values('3003', '3', '수요일');
+INSERT INTO lecture_state(Pid, Scode, time) values('3004', '4', '목요일');
+INSERT INTO lecture_state(Pid, Scode, time) values('3005', '5', '금요일');
+INSERT INTO lecture_state(Pid, Scode, time) values('3006', '6', '목요일');
+
+//조기 졸업 및 졸업 테이블
+INSERT INTO egraduate values(6, '4.0');
+INSERT INTO graduate values(6, '3.0');

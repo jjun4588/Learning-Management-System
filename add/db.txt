@@ -1,0 +1,129 @@
+//db생성
+create database BachelorManagement;
+
+//db사용
+use BachelorManagement;
+
+//관리자 생성
+CREATE USER 'insik'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON BachelorManagement.* TO 'insik'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+//사용자 테이블
+create table user(
+id int not null,
+pw int not null,
+name varchar(10),
+department varchar(30) not null,
+email varchar(100),
+phone int,
+address varchar(100),
+job varchar(30),
+primary key(id));
+
+//휴복학 테이블
+create table user_state(
+id int not null,
+ustate varchar(20) not null,
+state varchar(30),
+primary key(id));
+
+//성적 테이블
+create table grades(
+Pid varchar(30) not null,
+Scode varchar(30) not null,
+id int not null,
+Sgrades int not null,
+Sname varchar(30) not null,
+score varchar(10),
+primary key(Scode, id));
+
+//조기졸업 요건 테이블
+create table egraduate(
+Bgrade int not null,
+Bscore varchar(10) not null,
+primary key(Bgrade));
+
+//졸업 요건 테이블
+create table graduate(
+Bgrade int not null,
+Bscore varchar(10) not null,
+primary key(Bgrade));
+
+//강의 테이블
+create table lecture(
+Scode varchar(30) not null,
+Sname varchar(100) not null,
+id varchar(30) not null,
+Pnumber int,
+time varchar(20),
+lroom varchar(20),
+clecture varchar(10),
+slecture varchar(10),
+primary key(Scode));
+
+//수강 강의 테이블
+create table class(
+Pid varchar(30) not null,
+id varchar(30) not null,
+Scode varchar(30) not null,
+primary key(Pid, id, Scode));
+
+
+//휴강 및 보강 테이블
+create table lecture_state(
+Pid varchar(30) not null,
+Scode varchar(30) not null,
+time varchar(20) not null,
+clecture varchar(10),
+slecture varchar(10),
+stime varchar(10),
+primary key(Pid, Scode));
+
+
+//변수 설명
+id = 아이디
+pw = 패스워드
+name = 유저이름
+department = 학과
+email = 이메일
+phone = 폰번호
+address = 주소
+ustate = 재학, 휴학, 복학 유저 상태 
+state = 처리 상태
+lgrades = 과목학점
+lname = 과목명
+score = 점수
+grade = 필요학점
+Bgrade = 졸업 기준 학점
+Bscore = 졸업 기준 점수
+Scode = 과목코드
+Sname = 과목명
+Pid = 교수 아이디
+Pnumber = 인원수
+time = 강의 시간
+lroom = 강의실
+clecture = 휴강
+slecture = 보강
+Sid = 학생아이디
+stime = 보강일자
+
+
+
+// 학과 및 강의명
+컴퓨터공학과 :  웹DB, 컴퓨터프로그래밍
+전기공학과 : 전자회로, 전기회로 실험
+정보통신공학과 : 데이터통신, 정보기술개론
+
+
+//졸업 학점 및 점수
+6학점 3.0
+
+//조기 졸업
+6학점 4.0
+
+
+	
+
+
+

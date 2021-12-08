@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>회원가입</title>
+<link rel="stylesheet" type="text/css" href="./css/signup.css">
+</head>
+<body>
+<form action=signup.php method=post>
+<div id="signup_box">
+<div id="signup_title">
+<span>회원가입을 위해 정보를 입력하세요</span>
+</div>
+<div id="signup_form">
+  <ul>
+    아이디 확인 <li><input type=text size=8 name=id> &nbsp; &nbsp; &nbsp;</li>
+    비밀번호 확인 <li><input type=password size=8 name=pw> &nbsp; &nbsp; &nbsp;</li>
+    이름  <li><input type=text size=10 name=name> &nbsp; &nbsp; &nbsp;</li>
+    이메일  <li><input type=text size=10 name=email> &nbsp; &nbsp; &nbsp;</li>
+    핸드폰  <li><input type=text size=10 name=phone> &nbsp; &nbsp; &nbsp;</li>
+    주소 <li><input type=text size=10 name=address> &nbsp; &nbsp; &nbsp;</li>
+    직업(학생,교수,행정,조교) <li><input type=text size=10 name=job> &nbsp; &nbsp; &nbsp;</li>
+  <ul>
+    <input type=submit value="회원가입">&nbsp;
+<center><?php  echo "<a href=login.html>로그인 화면으로 돌아가기</a>"; ?><center>
+</div>
+</form>
+</div>
+</body>
+</html>

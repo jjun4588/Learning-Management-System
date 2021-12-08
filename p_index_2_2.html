@@ -1,0 +1,28 @@
+<?
+session_start();
+
+if(!isset($_SESSION['user_id'])){
+  header("location: login.html");
+}
+?>
+		
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>7팀 학사관리시스템</title>
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body> 
+	<header>
+    	<?php include "p_header.php";?>
+    </header>
+
+	<section>
+	    <?php include "p_main_2_2.php";?>
+	</section> 
+
+</body>
+</html>
