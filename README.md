@@ -1,5 +1,5 @@
 # Learning-Management-System
-학사관리 시스템을 구현
+학사관리 시스템을 구현하였다.
 
 ![image](https://user-images.githubusercontent.com/82712691/145167629-59fe3ca7-742b-41cf-8521-d10f8d5866b7.png)
 
